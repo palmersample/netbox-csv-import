@@ -1,0 +1,37 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+---
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
+        args:
+          [
+            "--load-plugins=perflint",
+            "--extension-pkg-whitelist=pydantic"
+            # "--rcfile=pylintrc", # Link to your config file
+            # "--load-plugins=pylint.extensions.docparams", # Load an extension
+          ]
+
+#  - repo: https://github.com/psf/black
+#    rev: 22.6.0
+#    hooks:
+#      - id: black
+
+#  - repo: https://github.com/adrienverge/yamllint
+#    rev: v1.27.1
+#    hooks:
+#      - id: yamllint
+#        files: ".*.(?:yml|yaml)"

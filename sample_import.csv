@@ -1,0 +1,7 @@
+name,device_role,manufacturer,device_type,serial,asset_tag,region,site,location,platform,wlc_primary_association,wlc_secondary_association,wlc_tertiary_association,wired_mac,radio0_mac,radio0_band,radio0_rf_role,radio0_enabled,radio0_channel_number,radio0_channel_width,radio0_tx_power,radio1_mac,radio1_band,radio1_rf_role,radio1_enabled,radio1_channel_number,radio1_channel_width,radio1_tx_power
+APMCO11N32,ap,cisco,air-ap-2802e-b-k9,XYZ012456ZZ,31907,united-states,mco,mco-1-1-north,iosxe,WLC-NA-MCO-2,,,1234abcd1000,1234abcd10aa,2.4,ap,TRUE,11,,12,1234abcd10ab,5,ap,TRUE,36,40,15
+APMCO11N34,ap,cisco,air-ap-2802e-b-k9,XYZ012786ZZ,31995,united-states,mco,mco-1-1-north,iosxe,WLC-NA-MCO-1,,,1234abcd1111,1234abcd11aa,2.4,ap,FALSE,11,,15,1234abcd11ab,5,ap,FALSE,104,20,12
+APMCO12C10,ap,cisco,air-ap-2802e-b-k9,XYZ823456ZZ,32021,united-states,mco,mco-1-2-central,iosxe,WLC-NA-MCO-1,,,1234abcd1222,1234abcd12aa,2.4,ap,TRUE,6,,9,1234abcd12ab,5,ap,TRUE,60,20,12
+APMCO12S17,ap,cisco,air-ap-2802e-b-k9,XYZ012238YZ,19703,united-states,mco,mco-1-2-south,iosxe,WLC-NA-MCO-1,,,1234abcd1333,1234abcd13aa,2.4,ap,TRUE,11,,12,1234abcd13ab,5,ap,TRUE,161,20,9
+APMCO21W02,ap,cisco,air-ap-2802e-b-k9,XYZ012499YL,27530,united-states,mco,mco-2-1-west,iosxe,WLC-NA-MCO-1,,,1234abcd1444,1234abcd14aa,2.4,ap,TRUE,1,,18,1234abcd14ab,5,ap,TRUE,136,20,12
+APMCO31W02,ap,cisco,air-ap-2802e-b-k9,XYZ012499YL,27530,united-states,mco,mco-2-1-west,iosxe,WLC-NA-MCO-1,,,1234abcd1444,1234abcd14aa,2.4,ap,TRUE,1,,18,1234abcd1afb,5,ap,TRUE,136,20,12
