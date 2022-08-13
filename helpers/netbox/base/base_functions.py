@@ -7,10 +7,10 @@ from copy import copy as dict_copy
 from logging import getLogger
 from re import match as re_match
 from pydantic import ValidationError
-from ..classes import (Netbox,
-                       NetboxDataValidationError,
-                       NetboxDeviceDataValidationError,
-                       NetboxInterfaceDataValidationError)
+from .base_classes import (Netbox,
+                           NetboxDataValidationError,
+                           NetboxDeviceDataValidationError,
+                           NetboxInterfaceDataValidationError)
 
 logger = getLogger(__name__)
 

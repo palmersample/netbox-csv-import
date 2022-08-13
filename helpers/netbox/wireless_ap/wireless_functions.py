@@ -5,18 +5,18 @@ from logging import getLogger
 from re import compile as re_compile
 from requests.exceptions import ConnectionError as RequestsConnectionError
 from pynetbox.core.query import RequestError as NetboxRequestError
-from .base_functions import (generate_import_dicts,
-                             generate_custom_fields,
-                             validate_device_dict,
-                             validate_interface_dict)
-from ..classes import (NetboxWirelessAp,
-                       NetboxDeviceDataValidationError,
-                       NetboxInterfaceDataValidationError,
-                       NetboxDeviceImportError,
-                       NetboxInterfaceImportError)
-from ..models import (NetboxWirelessApDeviceModel,
-                      NetboxBaseInterfaceModel,
-                      NetboxWirelessApInterfaceModel)
+from .netbox_wireless import NetboxWirelessAp
+from ..base import (generate_import_dicts,
+                    generate_custom_fields,
+                    validate_device_dict,
+                    validate_interface_dict,
+                    NetboxDeviceDataValidationError,
+                    NetboxInterfaceDataValidationError,
+                    NetboxDeviceImportError,
+                    NetboxInterfaceImportError)
+from .wireless_models import (NetboxWirelessApDeviceModel,
+                              NetboxBaseInterfaceModel,
+                              NetboxWirelessApInterfaceModel)
 
 logger = getLogger(__name__)
 

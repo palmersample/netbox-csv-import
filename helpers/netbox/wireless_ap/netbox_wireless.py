@@ -1,9 +1,9 @@
 """
 Class definitions for NetBox wireless devices (AP, WLC, etc).  Classes
-defined here should inherit from base classes in netbox_base.py.
+defined here should inherit from base classes in base_classes.py.
 """
 from logging import getLogger
-from .netbox_base import NetboxBaseDevice
+from ..base import NetboxBaseDevice
 
 
 logger = getLogger(__name__)
