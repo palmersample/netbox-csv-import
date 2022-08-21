@@ -13,7 +13,8 @@ from .wireless_vars import (allowed_channel_numbers_24ghz,
                             allowed_channel_width_5ghz,
                             default_channel_width_5ghz,
                             default_channel_width_24ghz)
-from.base_models import NetboxBaseDeviceModel, NetboxBaseInterfaceModel
+from ..base import (NetboxBaseDeviceModel,
+                    NetboxBaseInterfaceModel)
 
 logger = getLogger(__name__)
 
