@@ -25,9 +25,11 @@ from helpers import get_vault_secret, access_point, VaultError
 # generated in this script.
 logger = logging.getLogger(__name__)
 
-logger.setLevel(logging.DEBUG)
+GLOBAL_LOGLEVEL = logging.INFO
+
+logger.setLevel(GLOBAL_LOGLEVEL)
 console_handler = logging.StreamHandler(sys_stdout)
-console_handler.setLevel(logging.DEBUG)
+console_handler.setLevel(GLOBAL_LOGLEVEL)
 logger.addHandler(console_handler)
 
 # Map device types (provided via argument) to the proper import function.
@@ -53,7 +55,7 @@ def configure_root_logging():
     """
     root_logger = logging.getLogger()
     handler = logging.StreamHandler(sys_stdout)
-    handler.setLevel(logging.INFO)
+    handler.setLevel(GLOBAL_LOGLEVEL)
     root_formatter = logging.Formatter('%(asctime)s %(processName)-10s '
                                        '%(name)s %(levelname)-8s %(message)s')
     handler.setFormatter(root_formatter)
@@ -73,7 +75,7 @@ def configure_worker_logging(msg_queue):
     log_handler = LoggingQueueHandler(msg_queue)
     worker_logger = logging.getLogger()
     worker_logger.addHandler(log_handler)
-    worker_logger.setLevel(logging.DEBUG)
+    worker_logger.setLevel(GLOBAL_LOGLEVEL)
 
 
 def root_logging_process(msg_queue, configurator):

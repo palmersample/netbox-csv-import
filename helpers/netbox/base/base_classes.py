@@ -11,6 +11,10 @@ from logging import getLogger
 from requests import Session as requests_session
 from pynetbox import api as netbox_api, RequestError as NetboxRequestError
 from urllib3 import disable_warnings
+from ..exceptions import (NetboxImportError,
+                          NetboxDeviceImportError,
+                          NetboxInterfaceImportError,
+                          NetboxSkipImport)
 
 
 logger = getLogger(__name__)
@@ -72,53 +76,6 @@ def set_object_attributes(object_ref, dict_data):
                     )
         else:
             setattr(object_ref, key, value)
-
-
-class NetboxDeviceDataValidationError(Exception):
-    """
-    Exception class to be raised if there is an error validating the device
-    information against the corresponding pydantic model.
-    """
-
-
-class NetboxInterfaceDataValidationError(Exception):
-    """
-    Exception class to be raised if there is an error validating the interface
-    information against the corresponding pydantic model.
-    """
-
-
-class NetboxDeviceImportError(Exception):
-    """
-    Exception class to be raised if there is an error creating or updating the
-    device in NetBox.
-    """
-
-
-class NetboxSkipImport(Exception):
-    """
-    Generic flow control class to be raised if an import should be skipped -
-    for example, all data is valid but the "no update" flag has been passed,
-    so an existing device should not be imported.
-    """
-
-class NetboxInterfaceImportError(Exception):
-    """
-    Exception class to be raised if there is an error updating interface(s)
-    associated with a device in NetBox.
-    """
-
-
-class NetboxDataValidationError(Exception):
-    """
-    This is going away...
-    """
-
-
-class NetboxImportError(Exception):
-    """
-    Generic class that is also going away...
-    """
 
 
 class Netbox:
